@@ -84,3 +84,5 @@ class SinglyLinkedList {
         console.log(results);
     }
 }
+
+export default SinglyLinkedList;

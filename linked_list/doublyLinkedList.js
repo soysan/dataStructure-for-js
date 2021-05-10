@@ -101,4 +101,4 @@ class DoublyLinkedList {
     }
 }
 
-console.log(new dNode(10));
+export default DoublyLinkedList;
