@@ -42,6 +42,16 @@ class DoublyLinkedList {
         this.tail = newNode;
     }
 
+    addNextNode = (node, newNode) => {
+        let temp = node.next;
+        node.next = newNode;
+        newNode.next = temp;
+        newNode.prev = node;
+
+        if (node === this.tail) this.tail = newNode;
+        else temp.prev = newNode;
+    }
+    
     reverse = () => {
         let reverse = this.tail;
         let iterator = this.tail.prev;
