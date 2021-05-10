@@ -35,6 +35,13 @@ class DoublyLinkedList {
         return iterator;
     }
 
+    append = (newNode) => {
+        this.tail.next = newNode;
+        newNode.next = null;
+        newNode.prev = this.tail;
+        this.tail = newNode;
+    }
+
     reverse = () => {
         let reverse = this.tail;
         let iterator = this.tail.prev;
