@@ -57,6 +57,23 @@ class SinglyLinkedList {
         iterator.next = iterator.next.next;
     }
 
+    reverse = () => {
+        if (this.head === null || this.head.next === null) return;
+
+        let reverse = this.head;
+        this.head = this.head.next;
+        reverse.next = null;
+
+        while (this.head !== null) {
+            let temp = this.head;
+            this.head = this.head.next;
+            temp.next = reverse;
+            reverse = temp;
+        }
+
+        this.head = reverse;
+    }
+
     printList = () => {
         let iterator = this.head;
         let results = "";
