@@ -26,6 +26,15 @@ class DoublyLinkedList {
         this.tail = currNode;
     }
 
+    at = (index) => {
+        let iterator = this.head;
+        for (let i = 0; i < index; i++){
+            iterator = iterator.next;
+            if (iterator === null) return null;
+        }
+        return iterator;
+    }
+
     printList = () => {
         let iterator = this.head;
         let results = "";
