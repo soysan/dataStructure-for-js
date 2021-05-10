@@ -1,0 +1,11 @@
+{
+  "name": "datastructure",
+  "version": "1.0.0",
+  "description": "this is some of Data Structures for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Masayuki Yamaguchi <stout22.dark@gmail.com>",
+  "license": "ISC"
+}
