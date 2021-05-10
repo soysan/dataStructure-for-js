@@ -35,6 +35,16 @@ class DoublyLinkedList {
         return iterator;
     }
 
+    popFront = () => {
+        this.head = this.head.next;
+        this.head.prev = null;
+    }
+
+    pop = () => {
+        this.tail = this.tail.prev;
+        this.tail.next = null;
+    }
+
     append = (newNode) => {
         this.tail.next = newNode;
         newNode.next = null;
@@ -50,6 +60,14 @@ class DoublyLinkedList {
 
         if (node === this.tail) this.tail = newNode;
         else temp.prev = newNode;
+    }
+
+    deleteNode = (node) => {
+        if (node === this.tail) return this.pop();
+        if (node === this.head) return this.popFront();
+
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
     }
 
     reverse = () => {
