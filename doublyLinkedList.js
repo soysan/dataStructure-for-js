@@ -51,7 +51,7 @@ class DoublyLinkedList {
         if (node === this.tail) this.tail = newNode;
         else temp.prev = newNode;
     }
-    
+
     reverse = () => {
         let reverse = this.tail;
         let iterator = this.tail.prev;
@@ -82,3 +82,5 @@ class DoublyLinkedList {
         console.log(results);
     }
 }
+
+console.log(new dNode(10));
