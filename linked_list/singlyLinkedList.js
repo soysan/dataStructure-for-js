@@ -29,12 +29,14 @@ class SinglyLinkedList {
         return iterator;
     }
 
-    preAppend = newNode => {
+    preAppend = data => {
+        let newNode = new sNode(data);
         newNode.next = this.head;
         this.head = newNode;
     }
 
-    append = newNode => {
+    append = data => {
+        let newNode = new sNode(data);
         let iterator = this.head;
         while (iterator.next !== null) {
             iterator = iterator.next;
@@ -43,7 +45,9 @@ class SinglyLinkedList {
     }
 
     popFront = () => {
+        let temp = this.head;
         this.head = this.head.next;
+        return temp.data;
     }
 
     delete = (index) => {
@@ -85,4 +89,4 @@ class SinglyLinkedList {
     }
 }
 
-export default SinglyLinkedList;
+export { SinglyLinkedList };
