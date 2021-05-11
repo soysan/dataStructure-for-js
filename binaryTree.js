@@ -97,6 +97,79 @@ class BinarySearchTree {
         return null;
     }
 
+    insert = (value) => {
+        if (this.root === null) return null;
+
+        let iterator = this.root;
+        let node = new BinaryTree(value, null, null);
+        while (iterator !== null) {
+            if (iterator.data > value && iterator.left === null) iterator.left = node;
+            else if (iterator.data < value && iterator.right === null) iterator.right = node;
+            iterator = iterator.data > value ? iterator.left : iterator.right;
+        }
+        return this.root;
+    }
+
+    transplant = (parent, node, target) => {
+        if (parent === null) this.root = target;
+        else if (parent.left === node) parent.left = target;
+        else parent.right = target;
+    }
+
+    deleteNode = (key) => {
+        if (this.root === null) return null;
+        let node = this.search(key);
+        if (!this.keyExist(key)) return this.root;
+
+        let parent = this.findParent(node);
+        if (node.left === null) this.transplant(parent, node, node.right);
+        else if (node.right === null) this.transplant(parent, node, node.left);
+        else {
+            let successor = this.findSuccessor(node);
+            let successorParent = this.findParent(successor);
+
+            if (successor !== node.right) {
+                this.transplant(successorParent, successor, successor.right);
+                successor.right = node.right;
+            }
+
+            this.transplant(parent, node, successor);
+            successor.left = node.left;
+        }
+    }
+
+    findParent = (node) => {
+        let iterator = this.root;
+        let parent = this.root;
+        while (iterator !== null) {
+            parent = iterator;
+            iterator = iterator.data > node.data ? iterator.left : iterator.right;
+        }
+        return parent;
+    }
+
+    findSuccessor = (node) => {
+        let targetNode = node;
+        if (targetNode === null) return null;
+        if (targetNode.right !== null) return this.minimumNode(targetNode.right);
+
+        let successor = null;
+        let iterator = this.root;
+
+        while (iterator !== null) {
+            if (targetNode.data === iterator.data) return successor;
+            if (targetNode.data < iterator.data && (successor === null || iterator.data < successor.data)) successor = iterator.left;
+            iterator = targetNode.data < iterator.data ? iterator.left : iterator.right;
+        }
+        return successor;
+    }
+
+    minimumNode = (node) => {
+        let iterator = node;
+        while (iterator !== null && iterator.left !== null) iterator = iterator.left;
+        return iterator;
+    }
+
     printSorted = (key) => {
         switch (key) {
             case "pre":     return this.root.printPreOrder();
