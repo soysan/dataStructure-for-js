@@ -1,5 +1,11 @@
 import Node from "./node.js";
 
+class QueueNode extends Node {
+    constructor(data) {
+        super(data);
+        this.prev = null;
+    }
+}
 class Queue {
     constructor() {
         this.head = null;
@@ -16,32 +22,41 @@ class Queue {
         return this.tail.data;
     }
 
-    enqueue = (data) => {
+    enqueueFront = (data) => {
+        let newNode = new QueueNode(data);
         if (this.head === null) {
-            this.head = new Node(data);
-        }
-        else if (this.tail === null) {
-            this.tail = new Node(data);
-            this.head.next = this.tail;
+            this.head = newNode;
+            this.tail = this.head;
         }
         else {
-            this.tail.next = new Node(data);
-            this.tail = this.tail.next;
+            this.head.prev = newNode;
+            newNode.next = this.head;
+            this.head = newNode;
         }
     }
 
-    dequeue = () => {
-        if (this.head === null) return null;
-        let temp = this.head;
-
-        if (this.head.next === null) {
-            this.head = null;
-            this.tail = null;
+    enqueueBack = (data) => {
+        let newNode = new QueueNode(data);
+        if (this.head === null) {
+            this.head = newNode;
+            this.tail = this.head;
         }
         else {
-            this.head = this.head.next;
+            this.tail.next = newNode;
+            newNode.next = this.tail;
+            this.tail = newNode;
         }
+    }
 
+    dequeueFront = () => {
+        if (this.head === null) return null;
+
+        let temp = this.head;
+        this.head = this.head.next;
+        if (this.head === null) this.head.prev = null;
+        else this.tail = null;
         return temp.data;
     }
+
+    
 }
