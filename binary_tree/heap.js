@@ -8,6 +8,7 @@ class HeapLibrary {
         for (let i = mid; i >= 0; i--){
             HeapLibrary.maxHeapify(arr, arr.length - 1, i);
         }
+        return arr;
     }
 
     static maxHeapify = (arr, heapEnd, i) => {
@@ -65,7 +66,7 @@ class PriorityQueue {
     }
 }
 
-export default Heap = {
+export {
     HeapLibrary,
     PriorityQueue
 }
