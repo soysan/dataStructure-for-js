@@ -36,38 +36,47 @@ class DoublyLinkedList {
     }
 
     popFront = () => {
+        let temp = this.head;
         this.head = this.head.next;
         this.head.prev = null;
+        return temp.data;
     }
 
     pop = () => {
+        let temp = this.tail;
         this.tail = this.tail.prev;
         this.tail.next = null;
+        return temp.data;
     }
 
-    append = (newNode) => {
+    append = (data) => {
+        let newNode = new dNode(data);
         this.tail.next = newNode;
         newNode.next = null;
         newNode.prev = this.tail;
         this.tail = newNode;
     }
 
-    addNextNode = (node, newNode) => {
-        let temp = node.next;
-        node.next = newNode;
+    addNextNode = (data, index) => {
+        let newNode = new dNode(data);
+        let preNode = this.at(index);
+        let temp = preNode.next;
+        preNode.next = newNode;
         newNode.next = temp;
-        newNode.prev = node;
+        newNode.prev = preNode;
 
-        if (node === this.tail) this.tail = newNode;
+        if (preNode === this.tail) this.tail = newNode;
         else temp.prev = newNode;
     }
 
-    deleteNode = (node) => {
-        if (node === this.tail) return this.pop();
-        if (node === this.head) return this.popFront();
+    deleteNode = (index) => {
+        let target = this.at(index);
+        if (!target) return null;
+        if (target === this.tail) return this.pop();
+        if (target === this.head) return this.popFront();
 
-        node.prev.next = node.next;
-        node.next.prev = node.prev;
+        target.prev.next = target.next;
+        target.next.prev = target.prev;
     }
 
     reverse = () => {
@@ -101,4 +110,4 @@ class DoublyLinkedList {
     }
 }
 
-export default DoublyLinkedList;
+export { DoublyLinkedList };
