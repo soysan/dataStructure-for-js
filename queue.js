@@ -58,5 +58,16 @@ class Queue {
         return temp.data;
     }
 
-    
+    dequeueBack = () => {
+        if (this.head === null) return null;
+
+        let temp = this.tail;
+        this.tail = this.tail.prev;
+
+        if (this.tail !== null) this.tail.next = null;
+        else this.head = null;
+        return temp.data;
+    }
 }
+
+export default Queue;
