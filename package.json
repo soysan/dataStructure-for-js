@@ -6,8 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soysan/dataStructure-for-js"
+  },
   "keywords": ["data", "datastructure"],
   "author": "Masayuki Yamaguchi <stout22.dark@gmail.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "homepage": "https://github.com/soysan/dataStructure-for-js/blob/main/README.md"
 }
