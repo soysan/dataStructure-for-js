@@ -1,6 +1,6 @@
 {
   "name": "data-structure",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is some of Data Structures for JavaScript",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "https://github.com/soysan/dataStructure-for-js"
   },
-  "keywords": ["data", "datastructure"],
+  "keywords": [
+    "data",
+    "datastructure"
+  ],
   "author": "Masayuki Yamaguchi <stout22.dark@gmail.com>",
   "license": "ISC",
   "type": "module",
