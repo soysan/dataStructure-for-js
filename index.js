@@ -3,7 +3,7 @@ import { HeapLibrary, PriorityQueue } from "./binary_tree/heap.js";
 import { SinglyLinkedList } from "./linked_list/singlyLinkedList.js";
 import { DoublyLinkedList } from "./linked_list/doublyLinkedList.js";
 import { Stack } from "./stack_and_queue/stack.js";
-import { Queue } from "./stack_and_queue/queue.js";
+import { Deque } from "./stack_and_queue/deque.js";
 
 let arr = [2, 3, 5, 6, 7, 8];
 let binTree = new BinarySearchTree(arr);
@@ -30,3 +30,14 @@ let dll = new DoublyLinkedList(arr);
 // dll.popFront();
 // dll.reverse();
 // dll.printList();
+
+let queue = new Deque();
+// queue.enqueueFront(1);
+// queue.enqueueFront(2);
+// queue.enqueueFront(3);
+queue.enqueueBack(5)
+queue.enqueueBack(4)
+queue.enqueueBack(3)
+queue.enqueueBack(2)
+queue.enqueueBack(1)
+console.log(queue.printDeque());
