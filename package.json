@@ -1,5 +1,5 @@
 {
-  "name": "data-structure",
+  "name": "rc-data-structure",
   "version": "1.0.1",
   "description": "this is some of Data Structures for JavaScript",
   "main": "index.js",
