@@ -6,7 +6,7 @@ class QueueNode extends Node {
         this.prev = null;
     }
 }
-class Queue {
+class Deque {
     constructor() {
         this.head = null;
         this.tail = null;
@@ -27,11 +27,13 @@ class Queue {
         if (this.head === null) {
             this.head = newNode;
             this.tail = this.head;
+            return;
         }
         else {
             this.head.prev = newNode;
             newNode.next = this.head;
             this.head = newNode;
+            return;
         }
     }
 
@@ -40,11 +42,13 @@ class Queue {
         if (this.head === null) {
             this.head = newNode;
             this.tail = this.head;
+            return;
         }
         else {
             this.tail.next = newNode;
             newNode.next = this.tail;
             this.tail = newNode;
+            return;
         }
     }
 
@@ -68,6 +72,18 @@ class Queue {
         else this.head = null;
         return temp.data;
     }
+
+    printDeque = () => {
+        if (this.head === null) return null;
+        let iterator = this.head;
+        let results = "";
+        while (iterator !== this.tail) {
+            results += iterator.data + ' ';
+            iterator = iterator.next;
+        }
+        results += iterator.data;
+        return results;
+    }
 }
 
-export { Queue };
+export { Deque };
