@@ -59,7 +59,7 @@ class Deque {
         this.head = this.head.next;
         if (this.head === null) this.head.prev = null;
         else this.tail = null;
-        return temp.data;
+        return temp
     }
 
     dequeueBack = () => {
@@ -70,7 +70,7 @@ class Deque {
 
         if (this.tail !== null) this.tail.next = null;
         else this.head = null;
-        return temp.data;
+        return temp;
     }
 
     printDeque = () => {
