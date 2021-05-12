@@ -1,6 +1,6 @@
 # What is this?
 
-Data Structure model for JavaScript
+Data Structure for JavaScript
 
 # Installation
 
