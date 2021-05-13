@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/soysan/dataStructure-for-js"
+    "url": "https://github.com/soysan/rc-data-structure"
   },
   "keywords": [
     "data",
@@ -17,5 +17,5 @@
   "author": "Masayuki Yamaguchi <stout22.dark@gmail.com>",
   "license": "ISC",
   "type": "module",
-  "homepage": "https://github.com/soysan/dataStructure-for-js/blob/main/README.md"
+  "homepage": "https://github.com/soysan/rc-data-structure/blob/main/README.md"
 }
