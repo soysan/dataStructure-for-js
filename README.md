@@ -4,17 +4,18 @@ Data Structure for JavaScript
 
 # Installation
 
-`npm i data-structure --save`
+`npm i rc-data-structure --save`
 
 # Options
 
 ```
-import { BinarySearchTree } from "./binary_tree/binaryTree.js";
-import { HeapLibrary, PriorityQueue } from "./binary_tree/heap.js";
-import { SinglyLinkedList } from "./linked_list/singlyLinkedList.js";
-import { DoublyLinkedList } from "./linked_list/doublyLinkedList.js";
-import { Stack } from "./stack_and_queue/stack.js";
-import { Deque } from "./stack_and_queue/deque.js";
+import { BinarySearchTree } from "rc-data-structure";
+import { HeapLibrary } from "rc-data-structure";
+import { PriorityQueue } from "rc-data-structure";
+import { SinglyLinkedList } from "rc-data-structure";
+import { DoublyLinkedList } from "rc-data-structure";
+import { Stack } from "rc-data-structure";
+import { Deque } from "rc-data-structure";
 ```
 
 # BinarySearchTree
