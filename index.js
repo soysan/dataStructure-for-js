@@ -5,3 +5,12 @@ import { DoublyLinkedList } from "./linked_list/doublyLinkedList.js";
 import { Stack } from "./stack_and_queue/stack.js";
 import { Deque } from "./stack_and_queue/deque.js";
 
+module.exports = {
+    BinarySearchTree,
+    HeapLibrary,
+    PriorityQueue,
+    SinglyLinkedList,
+    DoublyLinkedList,
+    Stack,
+    Deque,
+}
