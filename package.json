@@ -1,6 +1,6 @@
 {
   "name": "rc-data-structure",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "this is some of Data Structures for JavaScript",
   "main": "./main.min.js",
   "scripts": {
