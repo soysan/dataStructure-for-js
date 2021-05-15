@@ -46,7 +46,7 @@ class Deque {
         }
         else {
             this.tail.next = newNode;
-            newNode.next = this.tail;
+            newNode.prev = this.tail;
             this.tail = newNode;
             return;
         }
