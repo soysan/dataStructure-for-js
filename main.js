@@ -559,7 +559,7 @@ class Stack {
     }
 }
 
-module.exports = {
+export {
     BinarySearchTree,
     HeapLibrary,
     PriorityQueue,
