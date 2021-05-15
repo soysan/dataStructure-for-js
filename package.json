@@ -1,16 +1,16 @@
 {
   "name": "rc-data-structure",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "this is some of Data Structures for JavaScript",
   "main": "./index.js",
   "exports": {
     ".": "./binary_tree/*.js",
     "./linked_list": "./linked_list/*.js",
-    "./stack_and_queue" : "./stack_and_queue/*.js",
-    "./data" : {
-      "binary_tree" : "./binary_tree/*.js",
-      "linked_list" : "./linked_list/*.js",
-      "stack_queue" : "./stack_and_queue/*.js"
+    "./stack_and_queue": "./stack_and_queue/*.js",
+    "./data": {
+      "binary_tree": "./binary_tree/*.js",
+      "linked_list": "./linked_list/*.js",
+      "stack_queue": "./stack_and_queue/*.js"
     }
   },
   "scripts": {
