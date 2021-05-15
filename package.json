@@ -1,10 +1,10 @@
 {
   "name": "rc-data-structure",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "this is some of Data Structures for JavaScript",
   "main": "./index.js",
   "exports": {
-    "." : "./index.js"
+    ".": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
