@@ -4,14 +4,7 @@
   "description": "this is some of Data Structures for JavaScript",
   "main": "./index.js",
   "exports": {
-    ".": "./binary_tree/*.js",
-    "./linked_list": "./linked_list/*.js",
-    "./stack_and_queue": "./stack_and_queue/*.js",
-    "./data": {
-      "binary_tree": "./binary_tree/*.js",
-      "linked_list": "./linked_list/*.js",
-      "stack_queue": "./stack_and_queue/*.js"
-    }
+    ".": "./binary_tree/*.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
