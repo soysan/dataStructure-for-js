@@ -76,12 +76,11 @@ class Deque {
     printDeque = () => {
         if (this.head === null) return null;
         let iterator = this.head;
-        let results = "";
-        while (iterator !== this.tail) {
-            results += iterator.data + ' ';
+        let results = ""
+        while (iterator != null) {
+            results += iterator.data + " ";
             iterator = iterator.next;
         }
-        results += iterator.data;
         return results;
     }
 }
