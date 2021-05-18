@@ -9,16 +9,11 @@ Data Structure for JavaScript
 # Options
 
 ```
-import { BinarySearchTree } from "rc-data-structure";
-import { HeapLibrary } from "rc-data-structure";
-import { PriorityQueue } from "rc-data-structure";
-import { SinglyLinkedList } from "rc-data-structure";
-import { DoublyLinkedList } from "rc-data-structure";
-import { Stack } from "rc-data-structure";
-import { Deque } from "rc-data-structure";
+import { BinarySearchTree, HeapLibrary, PriorityQueue, SinglyLinkedList, DoublyLinkedList, Stack, Deque } from "rc-data-structure";
 ```
 
-# BinarySearchTree
+# Usage 
+## BinarySearchTree
 ```
 let bst = new BinarySearchTree(int array);
 ```
@@ -28,7 +23,7 @@ let bst = new BinarySearchTree(int array);
     - deleteNode(int key)
     - printSorted(String "pre" or "in" or "post" or "reverse")
 
-# Stack
+## Stack
 ```
 let stack = new Stack();
 ```
@@ -37,7 +32,7 @@ let stack = new Stack();
     - pop() return T data
 
 
-# Deque
+## Deque
 ```
 let deq = new Deque();
 ```
@@ -50,12 +45,12 @@ let deq = new Deque();
     - printDeque()
 
 
-# HeapLibrary
+## HeapLibrary
     - HeapLibrary.buildMaxHeap(int array)
     - HeapLibrary.heapSort(int array)
 
 
-# PriorityQueue
+## PriorityQueue
 ```
 let pq = new PriorityQueue(int array);
 ```
@@ -64,7 +59,7 @@ let pq = new PriorityQueue(int array);
     - insert(int data)
 
 
-# SinglyLinkedList
+## SinglyLinkedList
 ```
 let sll = new SinglyLinkedList(T array);
 ```
@@ -77,7 +72,7 @@ let sll = new SinglyLinkedList(T array);
     - printList()
 
 
-# DoublyLinkedList
+## DoublyLinkedList
 ```
 let dll = new DoublyLinkedList(int arr)
 ```
