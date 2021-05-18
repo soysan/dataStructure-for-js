@@ -2,7 +2,7 @@
   "name": "rc-data-structure",
   "version": "1.1.8",
   "description": "this is some of Data Structures for JavaScript",
-  "main": "./index.js",
+  "main": "./main.js",
   "exports": {
     ".": "./main.min.js"
   },
